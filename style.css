@@ -1,0 +1,31 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+h1 {
+  margin: 2em 0;
+}
+
+a.button {
+  color: #fff;
+  background-color: #e14615;
+  border-radius: 10px;
+  padding: 0.5em 1em;
+  box-shadow: 0 0 5px #999;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+#payload {
+  text-align: left;
+  border: 2px solid #444;
+  background-color: #ddd;
+  overflow: hidden;
+  width: 550px;
+  margin: 0 auto;
+  padding: 0.5em 1em;
+}
