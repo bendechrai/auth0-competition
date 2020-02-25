@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Auth0 Competition</title>
+  <link rel="stylesheet" href="/sample-app/style.css">
+</head>
+<body>
+  <h1>Auth0 Competition</h1>
+  <div class="content">
+
+    <div id="authbuttons">
+      <a id="login" class="button">Log In</a>
+      <a id="logout" class="button hidden">Log Out</a>
+    </div>
+
+    <div id="userinfo" class="hidden">
+
+      <h2>Success!</h2>
+      <p>Send a screenshot and post to LinkedIn or Twitter wth the hashtag #ReactConfAU and #Auth0LoginChallenge to enter the competition!</p>
+
+      <div id="screenshot">
+        <p>My name is <span id="name"></span>, and I just created an @Auth0 login form in minutes at #ReactConfAU!</p>
+        <p><img id="picture" src="" width="150"/></p>
+      </div>
+
+      <h2>Here's your user info</h2>
+      <p class="warn">This contains your personal info - don't include this in your screenshot!</p>
+      <pre id="payload"></pre>
+
+    </div>
+
+  </div>
+  <script src="https://cdn.auth0.com/js/auth0-spa-js/1.2/auth0-spa-js.production.js"></script>
+  <script src="/sample-app/renderuser.js"></script>
+  <script src="./auth0.js"></script>
+</body>
+</html>
