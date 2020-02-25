@@ -9,5 +9,5 @@ function renderUser(user) {
   document.getElementById('userinfo').classList.remove('hidden')
 
   // Promote the form fill comp entry
-  document.getElementById('screenshot').insertAdjacentHTML('afterend', "<h2>Want a second entry to the competition?</h2><p><a href=\"#\" target=\"auth0-competition-formfill\">Fill in this survey</a>, and that's exactly what you'll get!</p>")
+  document.getElementById('screenshot').insertAdjacentHTML('afterend', "<h2>Want a second entry to the competition?</h2><p><a href=\"https://forms.gle/45xUPCzBeRKxLuSe9\" target=\"auth0-competition-formfill\">Fill in this survey</a>, and that's exactly what you'll get!</p>")
 }
