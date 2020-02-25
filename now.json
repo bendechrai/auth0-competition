@@ -1,0 +1,11 @@
+{
+  "env": {
+    "auth0_competition_storageurl": "@auth0_competition_storageurl"
+  },
+  "routes": [
+    { "src": "^/?[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/auth0.js$", "dest": "/api/servejs.js" },
+    { "src": "^/?[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/$", "dest": "/api/servehtml.js" }
+
+  ]
+}
+
