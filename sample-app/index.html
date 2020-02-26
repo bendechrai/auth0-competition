@@ -8,7 +8,14 @@
   <h1>Auth0 Competition</h1>
   <div class="content">
 
+    <div id="demourl">
+      <h2>Log in from another device</h2>
+      <p>Open this page on your mobile phone to make it easier to share with your social network!</p>
+      <canvas id="demourl-qrcode"></canvas>
+    </div>
+
     <div id="authbuttons">
+      <h2 id="login-header">Log in from this device</h2>
       <a id="login" class="button">Log In</a>
       <a id="logout" class="button hidden">Log Out</a>
     </div>
@@ -32,6 +39,11 @@
   </div>
   <script src="https://cdn.auth0.com/js/auth0-spa-js/1.2/auth0-spa-js.production.js"></script>
   <script src="/sample-app/renderuser.js"></script>
+  <script src="/sample-app/qrcode.min.js"></script>
   <script src="./auth0.js"></script>
+  <script type="text/javascript"><!--
+    var canvas = document.getElementById('demourl-qrcode')
+    QRCode.toCanvas(canvas, window.location.href)
+  // --></script>
 </body>
 </html>

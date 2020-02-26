@@ -4,7 +4,9 @@ function renderUser(user) {
   document.getElementById('name').innerHTML = name
   document.getElementById('picture').src = user.picture
   document.getElementById('payload').innerHTML = JSON.stringify(user, null, '  ')
+  document.getElementById('login-header').classList.add('hidden')
   document.getElementById('login').classList.add('hidden')
+  document.getElementById('demourl').classList.add('hidden')
   document.getElementById('logout').classList.remove('hidden')
   document.getElementById('userinfo').classList.remove('hidden')
 
