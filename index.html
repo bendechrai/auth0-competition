@@ -1,62 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
   <meta charset="utf-8"/>
-  <title>Auth0 Sandbox</title>
+  <title>Auth0 Competition</title>
   <link rel="stylesheet" href="style.css">
 <head>
 </head>
 <body>
-  <nav>
-    <p>Don't have an Auth0 account yet? <a href="https://manage.auth0.com/logout" target="auth0-competition-signup">Sign up today</a>!</p>
-    <p>You can also enter the competition by <a href="https://forms.gle/45xUPCzBeRKxLuSe9" target="auth0-competition-formfill">filling in this survey</a>!</p>
-  </nav>
   <section>
     <h1>Auth0 Competition</h1>
-    <p class="intro">🎲 Get this login form working for an entry into the prize giveaway at ReactConf AU 🎲</p>
-    <div class="text-editor">
-      <div class="file">
-        <h2>index.html</h2>
-        <textarea id="htmlsrc"></textarea>
+    <p class="intro">Two chances to win a Sonos One Voice Controlled Smart Speaker</p>
+    <div class="competition-methods">
+      <div>
+        <h2>Create a Login Form in Minutes</h2>
+        <p><a href="/code-editor.html"><img src="/images/code-editor.jpg"/></a></p>
+        <p><a href="/code-editor.html" class="btn">Take the Challenge</a></p>
       </div>
-      <div class="file">
-        <h2>auth0.js</h2>
-        <textarea id="jssrc"></textarea>
+      <div>
+        <h2>Complete a Short Survey</h2>
+        <p><a href="https://forms.gle/45xUPCzBeRKxLuSe9" target="auth0-competition-formfill"><img src="/images/survey.png"/></a></p>
+        <p><a href="/code-editor.html" class="btn">Take the Survey</a></p>
       </div>
-    </div>
-    <div id="launcher" class="hidden">
-      <a id="launchbutton" href="#" onclick="save()" target="autho-competition-launcher">Launch</a>
-    </div>
-    <div id="notes" class="hidden">
-      <p>Your unique demo URL is: <span id="demourl"></span></p>
     </div>
   </section>
-  <script>
-
-    var demokey = '';
-
-    fetch('/api/load')
-    .then(function(response) { return response.json(); })
-    .then(function(json) {
-      document.getElementById('htmlsrc').innerHTML = json.htmlsrc
-      document.getElementById('jssrc').innerHTML = json.jssrc
-      document.getElementById('launchbutton').href = window.location.origin + '/' + json.demokey + '/'
-      document.getElementById('demourl').innerHTML = document.getElementById('launchbutton').href
-      document.getElementById('launcher').classList.remove('hidden')
-      document.getElementById('notes').classList.remove('hidden')
-      demokey = json.demokey
-    })
-
-    function save() {
-      fetch('/api/save', {
-        method: 'POST',
-        body: JSON.stringify({
-          demokey: demokey,
-          htmlsrc: document.getElementById('htmlsrc').value,
-          jssrc: document.getElementById('jssrc').value,
-        })
-      })
-    }
-
-  </script>
 </body>
 </html>
