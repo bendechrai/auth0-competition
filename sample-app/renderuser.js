@@ -1,6 +1,11 @@
 function renderUser(user) {
   let name = user.nickname || user.name
-  name = (name.charAt(0).toUpperCase() + name.slice(1))
+  name = name.split(/[\.\+]/)
+  name.forEach((part, idx, arr) => {
+    arr[idx] = part.charAt(0).toUpperCase() + part.slice(1)
+  })
+  name = name.join(' ')
+
   document.getElementById('name').innerHTML = name
   document.getElementById('picture').src = user.picture
   document.getElementById('payload').innerHTML = JSON.stringify(user, null, '  ')
