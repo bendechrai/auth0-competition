@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "dependencies": {
     "fs": "^0.0.1-security",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "qrcode": "^1.4.4",
     "uuid": "^3.4.0"
   },
